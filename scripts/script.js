@@ -238,7 +238,7 @@ optionsBox.addEventListener("click", function (e) {
     delete option[value];
 
     ele.remove();
-    // console.log(option);
+    
   }
 });
 
@@ -251,8 +251,7 @@ btnSend.addEventListener("click", async function () {
       ...option,
     };
 
-    // console.log(requestOBJ);
-    // console.log(fetchOption);
+    
     fetchOption.headers = {};
 
     if (requestOBJ.body__type !== "none") {
@@ -280,7 +279,7 @@ btnSend.addEventListener("click", async function () {
       fetchOption.body = bodyData;
     }
 
-    // console.log(requestOBJ.url);
+
     renderSpinner(responseBox);
 
     const res = await fetch(requestOBJ.url, fetchOption);
@@ -311,20 +310,13 @@ btnSend.addEventListener("click", async function () {
       data = JSON.stringify(JSON.parse(data),null,4);
     }
 
-    console.log(data);
 
     codeBox.innerHTML = data;
     Prism.highlightAll();
   } catch (err) {
     responseBox.innerHTML = "";
-    // console.dir(err);
+  
     renderError(`${err.message} , Please check the network tab if nessacery`);
   }
 });
 
-// (async function(){
-//     const data = await fetch('http://localhost:3000/postData', {
-//         method:'POST'
-//     });
-//     console.log(data);
-// })();
