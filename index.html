@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="module" defer src="scripts/script.js"></script>
+    <script defer src="/scripts/Prism/prism-whitespace.js"></script>
+    <link rel="stylesheet" href="./scripts/Prism/prism-dark.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="Favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="Favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="Favicon/favicon-16x16.png">
+    <link rel="manifest" href="Favicon/site.webmanifest">
+
+
+    <title>Request Master</title>
+</head>
+
+<body>
+    <nav>
+        <ul class="nav-list">
+            <li>
+                <a href="/index.html" class="nav-list__item">Home</a>
+            </li>
+            <li>
+                <a href="/views/Help.html" class="nav-list__item">Help</a>
+            </li>
+            <li>
+                <a href="/views/About.html" class="nav-list__item">About</a>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <form class="request">
+            <h2 class="heading__tertiary">Request url</h2>
+            <div class="group__col-1-auto padding-small">
+                <input type="url" class="input__text" name="url" id="url" placeholder="eg : www.example.com/getUser">
+                <input type="button" value="Send" class="btn btn__crimson btn-send">
+            </div>
+            <div class="container flex flex-gap-2">
+                <label for="request-type">Request Type</label>
+                <select name="request-type" id="request-type" class="request__type">
+                    <option value="GET">GET</option>
+                    <option value="POST">POST</option>
+                    <option value="UPDATE">UPDATE</option>
+                    <option value="DELETE">DELETE</option>
+                    <option value="PATCH">PATCH</option>
+                    <option value="PUT">PUT</option>
+                </select>
+            </div>
+
+            <h2 class="heading__tertiary">Add Headers</h2>
+            <div class="option group group-gap-1">
+                <!-- <div class="option__item">
+                    <label class="value">Authorization</label>
+                    <label class="value">Bearer 12345678</label>
+                    <input type="button" value="Remove" class="btn option__btn-remove">
+                </div> -->
+
+
+                <div class="options__form flex flex-gap-1">
+                    <input type="text" class="input__text options__key" placeholder="Key">
+
+                    <input type="text" class="input__text options__value" placeholder="Value">
+
+                    <input type="button" class="btn options__add btn__crimson" value="Add">
+
+                </div>
+            </div>
+
+            <div class="body-form flex flex-gap-2">
+
+                <div class="flex flex-gap-1">
+                    <input type="radio" name="body__type" id="none" value="none">
+                    <label for="none">None</label>
+                </div>
+
+                <div class="flex flex-gap-1">
+                    <input type="radio" name="body__type" id="json" value="application/json">
+                    <label for="json">JSON</label>
+                </div>
+
+
+                <div class="flex flex-gap-1">
+                    <input type="radio" name="body__type" id="Form-Data" value="multipart/form-data">
+                    <label for="Form-Data">Form-Data</label>
+                </div>
+
+                <div class="flex flex-gap-1">
+                    <input type="radio" name="body__type" id="x-www-form-urlencoded"
+                        value="application/x-www-form-urlencoded;charset=UTF-8">
+                    <label for="x-www-form-urlencoded">x-www-form-urlencoded</label>
+                </div>
+
+                <div class="flex flex-gap-1">
+                    <input type="radio" name="body__type" id="Raw" value="text/plain;charset=UTF-8">
+                    <label for="Raw">Raw</label>
+                </div>
+            </div>
+
+        </form>
+
+
+        <form class="body" enctype="multipart/form-data">
+            <!-- <div class="group body__item">
+                <label class="padding-small">Key</label>
+                <input type="text" name="chutiya" class="input__text">
+                <input type="button" value="Remove" class="btn btn__remove">
+            </div> -->
+
+
+        </form>
+
+        <h2 class="heading__tertiary margin-auto">Response</h2>
+
+        <div class="response__box margin__bottom-small">
+
+        </div>
+        <h2 class="heading__tertiary margin-auto">Response Data</h2>
+        <div class="response__data">
+            <pre>
+                <code class="language-javascript" id="code-box">
+                    
+                </code>
+            </pre>
+        </div>
+
+    </main>
+    <div class="error hidden">
+        <p class="error__message"></p>
+    </div>
+    
+</body>
+
+</html>

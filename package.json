@@ -1,0 +1,23 @@
+{
+  "name": "project-college",
+  "version": "1.0.0",
+  "description": "A application to test apis",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
+    "watch:sass": "node-sass ./sass/main.scss  ./style.css -w"
+  },
+  "author": "Subrashi",
+  "license": "ISC",
+  "devDependencies": {
+    "@parcel/packager-raw-url": "^2.3.2",
+    "@parcel/transformer-webmanifest": "^2.3.2",
+    "node-sass": "^7.0.1",
+    "parcel": "^2.3.2"
+  },
+  "dependencies": {
+    "json-formatter-js": "^2.3.4",
+    "jsoneditor": "^9.7.3"
+  }
+}

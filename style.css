@@ -1,0 +1,235 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+html {
+  font-size: 62.5%;
+  font-family: sans-serif; }
+  @media only screen and (max-width: 500px) {
+    html {
+      font-size: 53%; } }
+
+body {
+  font-size: 1.5rem;
+  min-height: 100vh;
+  background-color: #222;
+  color: #fff; }
+
+.main {
+  max-width: 144rem;
+  margin: 0 auto; }
+
+.request {
+  width: 80%;
+  margin-inline: auto;
+  padding: 2rem;
+  max-width: 153rem; }
+  @media only screen and (max-width: 500px) {
+    .request {
+      width: 100%; } }
+  .request__type {
+    padding: 1rem;
+    width: 15rem;
+    background: crimson;
+    border-radius: 6px;
+    border: none;
+    color: #fff; }
+
+.flex {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap; }
+  .flex-gap-2 {
+    gap: 2rem; }
+  .flex-gap-1 {
+    gap: 1rem; }
+
+.padding-small {
+  padding: 1rem; }
+
+.group {
+  display: grid; }
+  .group-gap-1 {
+    gap: 1rem; }
+  .group__col-1-auto {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 1rem; }
+
+.container {
+  padding: 1rem; }
+
+.input__text {
+  padding: 1rem; }
+  .input__text-area {
+    width: 100%;
+    font-size: 1.5rem;
+    padding: 1rem; }
+
+.btn {
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 4px;
+  text-transform: uppercase;
+  transition: 0.2s all; }
+  .btn__crimson {
+    color: #fff;
+    background-color: #dc143c; }
+    .btn__crimson:hover {
+      background-color: #ad102f;
+      transform: translateY(-2px);
+      box-shadow: 0rem 10px 10px rgba(0, 0, 0, 0.6); }
+
+.display-none {
+  display: none; }
+
+.value {
+  border: 1px solid;
+  padding: 1rem;
+  border-radius: 3px; }
+
+.option__item {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 1fr min-content;
+  width: 50%;
+  gap: 1rem;
+  margin: 0 1rem; }
+
+.heading__tertiary {
+  padding: 1rem 1.1rem;
+  text-transform: capitalize;
+  font-weight: normal;
+  max-width: 153rem; }
+
+.heading__secondary {
+  padding: 1rem 0;
+  text-transform: capitalize;
+  font-weight: normal;
+  width: 80%;
+  margin-inline: auto; }
+
+.heading__center {
+  width: 80%;
+  margin-inline: auto; }
+
+.heading__primary {
+  padding: 1rem;
+  text-transform: uppercase; }
+  .heading__primary-main {
+    padding: 3rem;
+    text-align: center;
+    font-size: 4rem; }
+
+.response__box {
+  width: 76%;
+  margin: 0 auto;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 10px;
+  max-width: 153rem; }
+  @media only screen and (max-width: 500px) {
+    .response__box {
+      width: 90%; } }
+
+.response__data {
+  width: 80%;
+  margin: 0 auto;
+  padding: 0 3rem;
+  max-width: 153rem; }
+  @media only screen and (max-width: 500px) {
+    .response__data {
+      width: 100%; } }
+
+.margin-auto {
+  width: 80%;
+  margin-inline: auto;
+  padding: 0 3rem; }
+
+.nav-list {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  padding: 1rem 5rem; }
+  @media only screen and (max-width: 500px) {
+    .nav-list {
+      justify-content: center; } }
+  .nav-list__item {
+    text-decoration: none;
+    display: inline-block;
+    padding: 1rem 2rem;
+    color: #fff;
+    border-radius: 4px;
+    transition: 0.1s all; }
+    .nav-list__item:hover {
+      background-color: #dc143c; }
+
+.error {
+  width: 80%;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #fff;
+  color: black;
+  padding: 1rem 2rem;
+  text-align: justify;
+  border-radius: 8px;
+  transition: 1s all; }
+
+.hidden {
+  opacity: 0;
+  pointer-events: none; }
+
+.images-block {
+  width: 80%;
+  display: block;
+  border: 1px solid crimson;
+  margin-inline: auto; }
+
+.para {
+  padding: 2rem 0;
+  font-size: 1.8rem;
+  word-spacing: 3px;
+  width: 80%;
+  text-align: justify;
+  margin-inline: auto; }
+
+.text-group {
+  padding: 2rem; }
+
+.margin__bottom-small {
+  margin-bottom: 2rem; }
+
+.clr__text-crimson {
+  color: #dc143c; }
+
+.body {
+  width: 78%;
+  margin-inline: auto;
+  padding: 0rem 1.3rem 2rem;
+  max-width: 153rem; }
+  @media only screen and (max-width: 500px) {
+    .body {
+      width: 90%; } }
+  .body__item {
+    grid-template-columns: 18.8rem auto auto;
+    gap: 1rem;
+    max-width: 48rem;
+    align-items: center;
+    margin: 1rem 0; }
+
+.svg {
+  width: 30px;
+  animation-name: rotateAni;
+  animation-duration: 1.5s;
+  animation-fill-mode: backwards;
+  animation-iteration-count: infinite; }
+
+@keyframes rotateAni {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
