@@ -15,6 +15,8 @@ const errorBox = document.querySelector(".error");
 
 inputNone.checked = true;
 
+console.log("welcome to the application");
+
 /**
  * @description This object will store all the key, value header option entered by user
  * @type {Object}
